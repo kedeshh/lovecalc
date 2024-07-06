@@ -67,7 +67,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
-            width: 350px;
+            width: 90%;
+            max-width: 350px;
+            margin: auto;
             z-index: 1; /* In front of the heart */
             position: relative;
         }
@@ -135,6 +137,22 @@
         .flower2 { top: 20%; left: 70%; }
         .flower3 { top: 70%; left: 20%; }
         .flower4 { top: 70%; left: 70%; }
+
+        @media (max-width: 600px) {
+            #lovecalc {
+                width: 90%;
+                max-width: 300px;
+            }
+        
+            #coutput h1 {
+                font-size: 24px;
+            }
+        
+            .flower {
+                width: 40px;
+                height: 40px;
+            }
+        }
         
     </style>
 </head>
