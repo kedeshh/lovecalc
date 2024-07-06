@@ -67,9 +67,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
-            width: 350px;
+            width: 90%; /* Adjust width for smaller screens */
+            max-width: 350px; /* Limit maximum width */
             z-index: 1; /* In front of the heart */
             position: relative;
+            margin: auto; /* Center horizontally */
         }
 
         #lovecalc div {
@@ -104,7 +106,7 @@
 
         #coutput h1 {
             margin: 0;
-            font-size: 48px;
+            font-size: 36px; /* Adjust font size for smaller screens */
             color: #ff66b2;
         }
 
@@ -124,18 +126,39 @@
         }
 
         .flower {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background: url('flower.png') no-repeat center center / contain;
-    }
+            position: absolute;
+            width: 30px; /* Adjust size for smaller screens */
+            height: 30px; /* Adjust size for smaller screens */
+            background: url('flower.png') no-repeat center center / contain;
+        }
 
         /* Positioning flowers around the heart */
-        .flower1 { top: 20%; left: 20%; }
-        .flower2 { top: 20%; left: 70%; }
-        .flower3 { top: 70%; left: 20%; }
+        .flower1 { top: 15%; left: 15%; }
+        .flower2 { top: 15%; left: 70%; }
+        .flower3 { top: 70%; left: 15%; }
         .flower4 { top: 70%; left: 70%; }
-        
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            #lovecalc {
+                width: 90%;
+                max-width: 300px;
+            }
+
+            #coutput h1 {
+                font-size: 24px;
+            }
+
+            .flower {
+                width: 20px;
+                height: 20px;
+            }
+
+            .flower1 { top: 10%; left: 10%; }
+            .flower2 { top: 10%; left: 70%; }
+            .flower3 { top: 80%; left: 10%; }
+            .flower4 { top: 80%; left: 70%; }
+        }
     </style>
 </head>
 <body>
@@ -222,8 +245,8 @@
 
             // Special case for specific names
             if (
-                (cnameone === "anthony" && cnametwo === "khanyile") ||
-                (cnameone === "khanyile" && cnametwo === "anthony")
+                (cnameone === "sam" && cnametwo === "kat") ||
+                (cnameone === "kat" && cnametwo === "sam")
             ) {
                 finalScore = 100;
             } else {
