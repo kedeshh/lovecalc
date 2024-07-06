@@ -121,10 +121,28 @@
             font-size: 12px;
             color: #999;
         }
+
+        .flower {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: url('flower.png') no-repeat center center / contain;
+    }
+
+    /* Positioning flowers around the heart */
+    .flower1 { top: 20%; left: 20%; }
+    .flower2 { top: 20%; left: 70%; }
+    .flower3 { top: 70%; left: 20%; }
+    .flower4 { top: 70%; left: 70%; }
+        
     </style>
 </head>
 <body>
     <div id="heart"></div>
+    <div class="flower flower1"></div>
+    <div class="flower flower2"></div>
+    <div class="flower flower3"></div>
+    <div class="flower flower4"></div>
     <div id="lovecalc">
         <form>
             <div>Name of Person 1</div>
