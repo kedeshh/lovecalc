@@ -159,12 +159,53 @@
             #coutput h1 {
                 font-size: 24px;
             }
-        
-            .flower {
-                width: 40px;
-                height: 40px;
+        }
+
+        @media (max-width: 600px) {
+            #heart {
+                width: 180px; 
+                height: 180px;
+                margin-top: -90px; 
+                margin-left: -90px;
+                top: 40%; 
+            }
+
+            #heart:before, #heart:after {
+                width: 180px;
+                height: 180px;
+            }
+
+            #heart:before {
+                top: -90px; 
+            }
+
+            #heart:after {
+                left: 90px; 
+            }
+
+            #lovecalc {
+                width: 80%;
+                max-width: none;
+                transform: scale(1);
+                padding: 20px;
+            }
+
+            #lovecalc input[type="text"] {
+                font-size: 14px; /* Adjust font size */
+            }
+
+            #lovecalc input[type="button"] {
+                padding: 10px 20px; /* Adjust padding */
+                font-size: 16px; /* Adjust font size */
+            }
+
+            #coutput h1 {
+                font-size: 28px; /* Adjust font size */
             }
         }
+
+
+
         
     </style>
 </head>
